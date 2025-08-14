@@ -15,14 +15,16 @@
     <script type="text/babel">
       function ChatInput() {
         return (
-          <div>
+          <>
             <input />
             <button>Send</button>
-          </div>
+          </>
         );
       }
 
-      const div = <div>{ChatInput()}</div>;
+      const div = <>
+       <ChatInput/>
+        </>;
 
       const container = document.querySelector(".js-container");
       ReactDOM.createRoot(container).render(div);
