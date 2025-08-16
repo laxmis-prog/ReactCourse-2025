@@ -11,24 +11,32 @@
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
-      function App() {
+      function LoginForm() {
         return (
-        <>
-        <p>Hello, welcome to my website</p>
-        <div>
-<input placeholder="Email"/>
-</div>
-<div>
-<input placeholder="Password" type="password"/>
-</div>
+          <>
+            <div>
+              <input placeholder="Email" />
+            </div>
+            <div>
+              <input placeholder="Password" type="password" />
+            </div>
 
-        <button>Login </button>
-        <button>Sign up </button>
-        </>
-      )
+            <button>Login </button>
+            <button>Sign up </button>
+          </>
+        );
       }
 
-      const container = document.querySelector('.js-container');
+      function App() {
+        return (
+          <>
+            <p>Hello, welcome to my website</p>
+            <LoginForm />
+          </>
+        );
+      }
+
+      const container = document.querySelector(".js-container");
       ReactDOM.createRoot(container).render(<App />);
     </script>
   </body>
